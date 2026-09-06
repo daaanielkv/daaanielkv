@@ -60,7 +60,9 @@ ROC-AUC 0.966 на тестовой выборке.
 <details>
 <summary><b>Butterfly Classification</b> — сравнение архитектур и edge-деплой CV-модели</summary>
 <br>
+  
 **Что сделал**
+
 - Сравнил 4 backbone (MobileNetV3-Small, EfficientNet-B0, ResNet18, ResNet50) на классификации 50 классов бабочек не только по accuracy, но и по latency на CPU и размеру модели.
 - Выбрал EfficientNet-B0 как компромисс accuracy/latency/размер, дообучил и экспортировал в ONNX.
 - Заквантовал модель в INT8 и замерил реальный эффект: размер, latency, просадку accuracy
