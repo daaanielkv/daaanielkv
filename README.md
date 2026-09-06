@@ -1,6 +1,6 @@
 # Даниил
 
-**ML / DL** с фокусом на CV.
+**ML / DL** с фокусом на CV
 
 [GitHub](https://github.com/daaanielkv) ·
 [Telegram](https://t.me/danbackyardtg) ·
