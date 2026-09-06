@@ -1,6 +1,6 @@
 # Даниил
 
-**ML / DL** · фокус на computer vision и edge-деплое — довожу модели до работы на NPU без GPU-сервера.
+**ML / DL** с фокусом на CV.
 
 [GitHub](https://github.com/daaanielkv) ·
 [Telegram](https://t.me/danbackyardtg) ·
