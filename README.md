@@ -58,81 +58,18 @@ ROC-AUC 0.966 на тестовой выборке.
 ## Собственные проекты
 
 <details>
-<summary><b>Retail CV Analytics</b> — трекинг покупателей в ритейле на edge-устройствах</summary>
-
+<summary><b>Butterfly Classification</b> — сравнение архитектур и edge-деплой CV-модели</summary>
 <br>
-
-Пайплайн для анализа поведения покупателей в торговых точках, часть исследования рынка
-edge CV analytics для российского retail SMB-сегмента.
-
 **Что сделал**
+- Сравнил 4 backbone (MobileNetV3-Small, EfficientNet-B0, ResNet18, ResNet50) на классификации 50 классов бабочек не только по accuracy, но и по latency на CPU и размеру модели.
+- Выбрал EfficientNet-B0 как компромисс accuracy/latency/размер, дообучил и экспортировал в ONNX.
+- Заквантовал модель в INT8 и замерил реальный эффект: размер, latency, просадку accuracy
 
-- Собрал пайплайн детекции и трекинга людей: YOLOv8/YOLO26 + BoT-SORT + ReID.
-- Обучил и протестировал на CrowdHuman с прицелом на деплой на edge-устройства.
-- Провёл предметное исследование рынка: конкуренты, вертикали, потенциальные ниши.
+**Результат:** val accuracy 0.9889 (FP32) → 0.9657 (INT8, Δ −0.023), размер модели уменьшен в 3.15x
 
-**Стек:** Python, YOLOv8/YOLO26, BoT-SORT, ReID, CrowdHuman.
+**Стек:** Python, PyTorch, torchvision, ONNX, onnxruntime
 
-</details>
-
-<details>
-<summary><b>Avito RAG</b> — гибридный retrieval-пайплайн, MAP@10 ≈ 0.437</summary>
-
-<br>
-
-**Что сделал**
-
-- Реализовал гибридный поиск: BM25 + dense retrieval.
-
-**Результат:** MAP@10 ≈ 0.437.
-
-**Стек:** Python, BM25, dense retrieval.
-
-</details>
-
-<details>
-<summary><b>RTO Forecasting</b> — прогнозирование для Pyaterochka, MAPE ~7%</summary>
-
-<br>
-
-**Что сделал**
-
-- Построил пайплайн прогнозирования на LightGBM/CatBoost.
-
-**Результат:** MAPE ~7%.
-
-**Стек:** Python, LightGBM, CatBoost.
-
-</details>
-
-<details>
-<summary><b>UEBA Anomaly Detection</b> — автоэнкодер для детекции аномального поведения</summary>
-
-<br>
-
-**Что сделал**
-
-- Реализовал автоэнкодер на PyTorch для детекции аномалий в поведенческих данных.
-
-**Результат:** ROC-AUC ~0.966.
-
-**Стек:** Python, PyTorch.
-
-</details>
-
-<details>
-<summary><b>IAEA Docs Scraper</b> — сбор публикаций МАГАТЭ</summary>
-
-<br>
-
-**Что сделал**
-
-- Собрал многоэтапный пайплайн скрейпинга на Playwright с автоматизацией через Makefile.
-
-**Стек:** Python, Playwright, Makefile.
-
-[Репозиторий](https://github.com/plotv/IAEA_doc)
-
+[Репозиторий](https://github.com/daaanielkv/butterfly-classification)
 </details>
 
 ---
