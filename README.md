@@ -88,7 +88,6 @@ ROC-AUC 0.966 на тестовой выборке.
 
 [Репозиторий](https://github.com/daaanielkv//text-orientation)
 </details>
----
 
 ## Образование
 
