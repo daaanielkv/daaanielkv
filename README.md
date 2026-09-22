@@ -57,7 +57,7 @@ ROC-AUC 0.966 на тестовой выборке.
 ## Собственные проекты
 
 <details>
-<summary><b>Butterfly Classification</b> — сравнение архитектур и edge-деплой CV-модели</summary>
+<summary><b>Butterfly Classification</b>. Задача сравнения архитектур и edge-деплой CV-модели</summary>
 <br>
   
 **Что сделал**
@@ -72,6 +72,22 @@ ROC-AUC 0.966 на тестовой выборке.
 [Репозиторий](https://github.com/daaanielkv/butterfly-classification)
 </details>
 
+<details>
+<summary><b>Rotation Detector</b>. Задача определения переворота текстового кропа на 180</summary>
+<br>
+
+**Что сделал**
+
+- Сгенерировал полностью синтетический датасет: текст (слова, цены, телефоны, даты, коды) разными шрифтами на реалистичных фонах с аугментациями
+- Учёл ротационную симметрию символов и строк (такие примеры размечены как неопределённые (label = 0.5), чтобы не шуметь в обучении)
+- Сравнил 5 лёгких backbone из `timm` (MobileNetV3-Small, MobileNetV3-Large, ResNet18, EfficientNet-B0, MobileViTv2-050) по Brier score и CPU-latency
+
+**Результат:** лучший баланс качества/скорости на ResNet18
+
+**Стек:** Python, PyTorch, timm, OpenCV
+
+[Репозиторий](https://github.com/daaanielkv//text-orientation)
+</details>
 ---
 
 ## Образование
